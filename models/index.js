@@ -23,6 +23,7 @@ Category.hasMany(Product,
 
 // Products belongToMany Tags (through ProductTag)
 //passing a string to through, asking sequelize to automatically generate a model ex. ProductTag
+//unique flase is IMPORTANT bc its what also the many to many relationship to occur
 Product.belongsToMany(Tag, {
   through: 
   {
