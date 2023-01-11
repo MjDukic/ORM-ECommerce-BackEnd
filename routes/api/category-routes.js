@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
+//**Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out 
+//what `req.body` will be for POST and PUT routes!
+
+
 // The `/api/categories` endpoint
 
 router.get('/', (req, res) => {
