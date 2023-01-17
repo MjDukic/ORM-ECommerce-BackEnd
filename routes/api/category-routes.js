@@ -10,6 +10,7 @@ const { Category, Product } = require('../../models');
 // find all categories
 // be sure to include its associated Products
 router.get('/', async (req, res) => {
+  console.log("category get route");
   try {
     const categoryData = await Category.findAll({include: [{model: Product}]});
     res.status(200).json(categoryData);
@@ -37,6 +38,7 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  console.log("category post route");
   // create a new category
   try {
     const categoryData = await Category.create(req.body);
